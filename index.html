@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dream Home Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Dream Home Booking</h1>
+    <p>Your perfect stay is just a few clicks away.</p>
+  </header>
+
+  <!-- Featured Homes Gallery -->
+  <section id="featured-homes">
+    <h2>Featured Homes</h2>
+    <div class="gallery">
+      <img id="gallery-img" src="https://picsum.photos/id/1015/600/350" alt="Featured Home" />
+      <div class="gallery-controls">
+        <button id="prev-img">Previous</button>
+        <button id="next-img">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="booking-form-section">
+    <h2>Book Your Stay</h2>
+    <form id="booking-form" novalidate>
+      <label>
+        Full Name <span class="required">*</span>:
+        <input type="text" id="name" placeholder="John Doe" required />
+      </label>
+      <label>
+        Email Address <span class="required">*</span>:
+        <input type="email" id="email" placeholder="email@example.com" required />
+      </label>
+      <label>
+        Check-in Date <span class="required">*</span>:
+        <input type="date" id="checkin" required />
+      </label>
+      <label>
+        Check-out Date <span class="required">*</span>:
+        <input type="date" id="checkout" required />
+      </label>
+      <label>
+        Number of Guests <span class="required">*</span>:
+        <input type="number" id="guests" min="1" max="10" value="1" required />
+      </label>
+      <button type="submit" id="book-btn">Book Now</button>
+      <p id="form-message"></p>
+    </form>
+  </section>
+
+  <!-- Interactive Info Tabs -->
+  <section id="info-tabs">
+    <h2>More Information</h2>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="1">About Us</button>
+      <button class="tab-btn" data-tab="2">Amenities</button>
+      <button class="tab-btn" data-tab="3">Policies</button>
+    </div>
+    <div class="tab-content active" id="tab-1">
+      <p>Dream Home Booking has been providing cozy and luxurious stays since 2010. We pride ourselves on exceptional customer service and unforgettable experiences.</p>
+    </div>
+    <div class="tab-content" id="tab-2">
+      <ul>
+        <li>Free Wi-Fi</li>
+        <li>Swimming Pool</li>
+        <li>24/7 Customer Support</li>
+        <li>Pet-friendly options</li>
+        <li>Complimentary Breakfast</li>
+      </ul>
+    </div>
+    <div class="tab-content" id="tab-3">
+      <p>Cancellation policy: Free cancellation up to 7 days before check-in.<br/>
+      No smoking inside properties.<br/>
+      Guests must be 18+ to book.</p>
+    </div>
+  </section>
+
+  <footer>
+    <button id="color-btn">You are welcome</button>
+    <p id="hover-text">Book your dream home.</p>
+    <p id="secret-message" style="display:none;">🎉 Surprise! You found the secret!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
